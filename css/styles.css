@@ -276,14 +276,9 @@ body {
 }
 
 .form-field {
+  position: relative;
   display: flex;
   flex-direction: column;
-}
-
-
-
-.form-field::placeholder {
-  color: var(--helper-text-color);
 }
 
 .form-label {
@@ -292,17 +287,37 @@ body {
 
 .form-input {
   margin: 0;
-  padding: 0;
+  padding: 14px 38px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
 
-.form-field:not(:last-child) {
+
+
+.form-input::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-field {
   margin-bottom: 8px;
 }
 
-.form-field:last-child {
+.checkbox {
   margin-bottom: 16px;
+}
+
+.icon-form {
+  position: absolute;
+  top: 55%;
+  left: 26px;
+  transform: translateX(-55%);
+  color: var(--navy-blue-color);
+}
+
+.form-input:hover,
+.form-input:focus {
+  border-color: var(--primary-brand-color);
+  fill: var(--primary-brand-color);
 }
 
 .comment {
@@ -319,6 +334,10 @@ body {
   text-decoration: underline;
 }
 
+.submit-button {
+  display: flex;
+  justify-content: center;
+}
 
 .close-modal {
   position: absolute;
@@ -590,24 +609,27 @@ body {
 .subscribe-button {
   margin-left: 24px;
   padding: 8px 24px;
+  gap: 16px;
   border-radius: 4px;
   border: none;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 
   color: var(--white-color);
   background-color: var(--primary-brand-color);
   font-family: inherit;
+  cursor: pointer;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  text-align: center;
   letter-spacing: 0.04em;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.icon-subscribe {
-  margin-left: 16px;
+.subscribe-button:hover,
+.subscribe-button:focus {
+  background-color: var(--secondary-brand-color);
 }
 
 /* Portfolio */
