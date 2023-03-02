@@ -335,27 +335,45 @@ body {
 
 .checkbox-plase {
   display: flex;
+  flex-direction: row;
   align-items: center;
+  gap: 8px;
   margin-bottom: 24px;
 }
 
 .checkbox {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .icon-checkbox {
   display: inline-block;
   width: 16px;
   height: 16px;
-  border: 1.25px solid #2E2F42;
+  border: 1.25px solid var(--navy-blue-color);
   border-radius: 2px;
 }
 
 .checkbox-label {
-  margin-left: 8px;
+  display: inline-block;
+  line-height: 1.33;
+  cursor: pointer;
+}
+
+.checkbox:checked+.icon-checkbox {
+  background-color: var(--secondary-brand-color);
+  border-color: transparent;
+  background-image: url(../images/checkbox.svg);
+  background-size: contain;
+  background-origin: border-box;
 }
 
 .policy {
@@ -633,6 +651,11 @@ body {
   font-size: 12px;
   line-height: 2;
   letter-spacing: 0.04em;
+}
+
+.subscribe:focus-visible {
+  outline: none;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .subscribe-button {
