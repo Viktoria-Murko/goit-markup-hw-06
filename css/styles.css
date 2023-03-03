@@ -244,9 +244,10 @@ body {
   left: 50%;
   top: 50%;
 
-  min-width: 408px;
+  max-width: 408px;
   min-height: 576px;
   padding: 24px;
+  padding-top: 72px;
 
   border-radius: 4px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.14),
@@ -260,7 +261,6 @@ body {
 
 .modal-title {
   display: block;
-  margin-top: 48px;
   margin-bottom: 16px;
   color: var(--navy-blue-color);
   font-weight: 500;
@@ -276,7 +276,6 @@ body {
 }
 
 .form-field {
-  position: relative;
   display: flex;
   flex-direction: column;
   margin-bottom: 8px;
@@ -287,11 +286,18 @@ body {
 }
 
 .form-input {
+  width: 100%;
+  height: 40px;
+  padding-left: 38px;
   margin: 0;
-  padding: 14px 38px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-icon {
+  position: relative;
+
 }
 
 .form-input::placeholder {
@@ -300,9 +306,9 @@ body {
 
 .icon-form {
   position: absolute;
-  top: 55%;
-  left: 26px;
-  transform: translateX(-55%);
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
   fill: var(--navy-blue-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -335,7 +341,6 @@ body {
 
 .checkbox-plase {
   display: flex;
-  flex-direction: row;
   align-items: center;
   gap: 8px;
   margin-bottom: 24px;
@@ -355,7 +360,6 @@ body {
 }
 
 .icon-checkbox {
-  display: inline-block;
   width: 16px;
   height: 16px;
   border: 1.25px solid var(--navy-blue-color);
@@ -365,7 +369,6 @@ body {
 .checkbox-label {
   display: inline-block;
   line-height: 1.33;
-  cursor: pointer;
 }
 
 .checkbox:checked+.icon-checkbox {
@@ -382,8 +385,9 @@ body {
 }
 
 .submit-button {
-  display: flex;
-  justify-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .close-modal {
@@ -630,7 +634,7 @@ body {
 }
 
 .subscribe-section {
-  margin-left: 80px;
+  margin-left: auto;
 }
 
 .subscribe-form {
@@ -639,6 +643,7 @@ body {
 
 .subscribe {
   display: block;
+  width: 264px;
   padding: 8px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -654,7 +659,7 @@ body {
 }
 
 .subscribe:focus-visible {
-  outline: none;
+  outline: 1px solid var(--primary-brand-color);
   color: rgba(255, 255, 255, 0.6);
 }
 
@@ -666,7 +671,6 @@ body {
   border: none;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 
   color: var(--white-color);
   background-color: var(--primary-brand-color);
